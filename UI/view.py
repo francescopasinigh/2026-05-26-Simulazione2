@@ -24,11 +24,11 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
 
-        self._ddrating1 = ft.Dropdown(label="Voto", hint_text="Rating")
-        self._ddrating2 = ft.Dropdown(label="Voto", hint_text="Rating")
+        self._ddrating1 = ft.Dropdown(label="Voto", hint_text="Rating")#IMPORTANTE PER FILLARE I DD
+        self._ddrating2 = ft.Dropdown(label="Voto", hint_text="Rating")#IMPORTANTE PER FILLARE I DD
 
-
-        self._controller.fillDDsRating()
+        self._controller.fillDDsRating(self._ddrating1)
+        self._controller.fillDDsRating(self._ddrating2)
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
 
         row1 = ft.Row([self._ddrating1,self._ddrating2, self._btnCreaGrafo], alignment=ft.MainAxisAlignment.CENTER,
